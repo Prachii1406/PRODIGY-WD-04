@@ -1,0 +1,392 @@
+/* Reset & base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+#home.landing {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 10%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a, #1e1e1e);
+  color: #f0f0f0;
+  flex-wrap: wrap;
+  gap: 40px;
+  text-align: left;
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.hero-content .highlight {
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff88;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 25px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: #00ffff;
+  color: #121212;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: #00ffff;
+  border: 2px solid #00ffff;
+  transform: scale(1.05);
+}
+
+.scroll-indicator {
+  margin-top: 30px;
+  font-size: 24px;
+  color: #00ffff;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+.profile-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 280px;
+  padding-top: 20px;
+}
+
+.profile-image img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #00ffff50;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.profile-image img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+  #home.landing {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 40px 5%;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+
+  .profile-image img {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .profile-image img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+
+/* Navbar */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #1f1f1f;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+
+nav a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: #00ffff;
+}
+
+/* Landing Section */
+
+
+.intro-text h1 {
+  font-size: 3rem;
+}
+.highlight {
+  color: #00ffff;
+}
+.intro-text p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+.profile-image img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  border: 4px solid #00ffff;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #181818;
+  border-top: 1px solid #333;
+}
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #00ffff;
+}
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background-color: #1e1e1e;
+  border: 1px solid #00ffff30;
+  border-radius: 15px;
+  padding: 25px;
+  width: 48%; 
+  color: #f0f0f0;
+  text-align: left;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card h3 {
+  color: #00ffff;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.project-card p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.project-card a {
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 18px rgba(0, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    width: 100%;
+  }
+}
+
+#skills {
+  background-color: #181818;
+  padding: 60px 20px;
+  text-align: center;
+  border-top: 1px solid #333;
+}
+
+#skills h2 {
+  color: #00ffff;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.skill-category {
+  margin-bottom: 40px;
+}
+
+.skill-category h3 {
+  color: #00ffff;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.skill {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: 1px solid #00ffff40;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.skill i {
+  font-size: 18px;
+}
+
+.skill:hover {
+  background-color: #00ffff;
+  color: #121212;
+  transform: translateY(-3px);
+}
+
+
+.about-card {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #1e1e1e;
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
+  border: 1px solid #00ffff20;
+  font-size: 16px;
+  color: #e0e0e0;
+  text-align: left;
+  line-height: 1.7;
+}
+
+.about-card p {
+  margin-bottom: 16px;
+}
+
+.about-card strong {
+  color: #00ffff;
+  font-weight: 600;
+}
+
+
+.social-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  color: #f0f0f0;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.social-links a:hover {
+  color: #00ffff;
+}
+
+.social-links i {
+  font-size: 20px;
+}
+.footer {
+  background-color: #181818;
+  padding: 40px 10% 20px;
+  color: #ccc;
+  text-align: center;
+  border-top: 1px solid #333;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00ffff;
+}
+
+.footer-tagline {
+  font-size: 1rem;
+  color: #aaa;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+
